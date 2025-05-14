@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "npm run prebuild && next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "tsx scripts/fetchNotion.ts",
-    "export": "npm run build && touch out/.nojekyll"
+    "prebuild": "tsx scripts/fetchNotion.ts"
   },
   "dependencies": {
     "@notionhq/client": "^3.0.1",
