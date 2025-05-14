@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -37,9 +36,9 @@ export default function Blog({ slugs }: { slugs: string[] }) {
       <ul className="list-disc pl-4 space-y-2">
         {slugs.map((slug) => (
           <li key={slug}>
-            <Link href={`/blog/${slug}`} className="text-blue-600 underline">
+            <link href={`/blog/${slug}`} className="text-blue-600 underline">
               {slug}
-            </Link>
+            </link>
           </li>
         ))}
       </ul>
