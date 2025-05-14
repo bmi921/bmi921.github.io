@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
-// フォントどうにかする
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,5 +11,10 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  return <main className="">aa</main>;
+  return (
+    <main className="">
+      <a href="/blog">Blog</a>
+      <a href="/cvrp.html">CVRP</a>
+    </main>
+  );
 }
