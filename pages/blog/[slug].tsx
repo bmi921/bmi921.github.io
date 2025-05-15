@@ -2,26 +2,8 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { unified } from "unified";
-import remarkParse from "remark-parse";
-import remarkRehype from "remark-rehype";
-import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import rehypePrettyCode from "rehype-pretty-code";
-import rehypeStringify from "rehype-stringify";
 import Head from "next/head";
 import MarkdownPreview from "@/components/markdown-preview";
-
-const testMd = `
-# Hello
-
-This is a paragraph.
-
-- list1
-- list2
-
-[リンク](https://example.com)
-`;
 
 interface PostProps {
   frontmatter: {
