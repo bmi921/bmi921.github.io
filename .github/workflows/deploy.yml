@@ -1,0 +1,52 @@
+name: Deploy Next.js Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "preview-${{ github.event.number }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with Next.js
+        run: |
+          npm run build
+          npm run export
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-linux-latest
+    environment:
+      name: preview-${{ github.event.number }}
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy to Preview
+        id: deploy
+        uses: actions/deploy-pages@v4
