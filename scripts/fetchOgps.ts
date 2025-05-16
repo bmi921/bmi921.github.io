@@ -2,9 +2,18 @@ import fs from "fs";
 import path from "path";
 import fetch from "node-fetch";
 import * as cheerio from "cheerio";
+import crypto from "crypto";
 
 const POSTS_DIR = path.join(process.cwd(), "content/posts");
 const OGP_DIR = path.join(process.cwd(), "public/ogp");
+
+// ハッシュ化関数
+function generateHashFilename(url: string): string {
+  // 1. URLをハッシュ化（MD5やSHA-1など）
+  const hash = crypto.createHash("md5").update(url).digest("hex");
+  // 2. 拡張子を追加
+  return `${hash}.jpg`;
+}
 
 function getAllMarkdownFiles(dir: string): string[] {
   return fs
@@ -62,7 +71,8 @@ export async function fetchOgps() {
   }
 
   for (const link of links) {
-    const filename = encodeURIComponent(link) + ".jpg";
+    // const filename = encodeURIComponent(link) + ".jpg";
+    const filename = generateHashFilename(link); // 新方式
     const filepath = path.join(OGP_DIR, filename);
 
     if (fs.existsSync(filepath)) continue;

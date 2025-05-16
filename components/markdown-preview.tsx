@@ -22,7 +22,7 @@ export default function MarkdownPreview({ content }: { content: string }) {
             a({ href, children }) {
               if (!href) return <>{children}</>;
               if (href.startsWith("http")) {
-                return <OgpCard href={href}>{children}</OgpCard>;
+                return <OgpCard href={href} />;
               }
               return <a href={href}>{children}</a>;
             },
