@@ -1,0 +1,65 @@
+{
+  "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/e98d4bac-1133-4c17-b082-bc9746529585/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-05-13_15.06.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VWB73NHM%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDB0BZ2EhIHhPpOvAs6kYbFvDQM1CP87XDIXSQqLFfL6wIhAMelIWHuyOVJqXQrPN0C7GQZ58O%2FoXKJyZDOZmykzU8MKv8DCD0QABoMNjM3NDIzMTgzODA1IgwJkY5PdfYvMS5RfWkq3APvkvooVwURzwVEVnVJHZvYWunu9CFqimHHbU4a8RmxUASSMGOYIKYQhsdwxQcpRaiQEeI%2B0o9SQtHzz%2BvMTlN%2Be6OwVxRKr3xGnolsc5baDA3Zu5RTOvJTmJXXxzqwHWLTvw4XD1pFZL%2FxiNhjVePUmhcxSpW%2BBRs%2F7N8m%2Fky6uqbVfYCzBw3a8kMLIk0q7fupWuFRfYO%2F20tWxdM5tDngkFf5WtjloLC7p13dFebjeBkNtLEGUUZqRaXAuebZz5l17WAXufE9eLhz32kP68XVJUoFod%2FT5XT6lZC1kl%2B0kNjahy1mcMezfCB7xvqxqydxQQg%2FhG5vEL%2FWr57NsKZEHnAWkq8snlMrsEgLTbXGMvfESaPzG%2BP4%2FtD7%2FttAjSWU3Lil1MNufC3AojDup3JipffTqTJ8AIHbABiNFuVAX8Kz%2BS9xoc7G74IYPRNY5S28In7Ckz%2Frt25YnOIKQutrwQJrwp39LWJUm%2B7fQ2Z4VOZr20qVNzEgHnM1vgfGRhBQ7lbUcFM4Vkj49ZIJOz3e5rpJi3BevJVY30LVoL%2BtQ%2Fo0iTSWuodkoI0XqzrqJNajrapvLIDx8uxKHoo%2BVPYxRY8bazYeobFHCmX16ijSu4Q7YgGdbtNpul7btTCD8JrBBjqkAZtAmxA2Ql8lhprAmk2veye0enG7ZglTS2xiuADAEsB4e%2BtZHiN41ZgjtzDoItQJANTWsgxPw2Nq8mR1YY%2FT76NOX3IcH7NySu4a0G%2BptpyoNMoKPKRvf5E3vwM4HAeXwGFMnchuFCTY4DvOhhiNZLJ14POmnwcFuF%2B%2BgdI2Hv2HqyviuvvXUH0UE%2BgxOCrhnIBe%2FTCPnf5Gnv9Ho3ArsR8FHxEP&X-Amz-Signature=972a3e402a00fe9ea7e62f15eee46571d0fc62c05646e631263163518667e006&X-Amz-SignedHeaders=host&x-id=GetObject": {
+    "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/e98d4bac-1133-4c17-b082-bc9746529585/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-05-13_15.06.47.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VWB73NHM%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDB0BZ2EhIHhPpOvAs6kYbFvDQM1CP87XDIXSQqLFfL6wIhAMelIWHuyOVJqXQrPN0C7GQZ58O%2FoXKJyZDOZmykzU8MKv8DCD0QABoMNjM3NDIzMTgzODA1IgwJkY5PdfYvMS5RfWkq3APvkvooVwURzwVEVnVJHZvYWunu9CFqimHHbU4a8RmxUASSMGOYIKYQhsdwxQcpRaiQEeI%2B0o9SQtHzz%2BvMTlN%2Be6OwVxRKr3xGnolsc5baDA3Zu5RTOvJTmJXXxzqwHWLTvw4XD1pFZL%2FxiNhjVePUmhcxSpW%2BBRs%2F7N8m%2Fky6uqbVfYCzBw3a8kMLIk0q7fupWuFRfYO%2F20tWxdM5tDngkFf5WtjloLC7p13dFebjeBkNtLEGUUZqRaXAuebZz5l17WAXufE9eLhz32kP68XVJUoFod%2FT5XT6lZC1kl%2B0kNjahy1mcMezfCB7xvqxqydxQQg%2FhG5vEL%2FWr57NsKZEHnAWkq8snlMrsEgLTbXGMvfESaPzG%2BP4%2FtD7%2FttAjSWU3Lil1MNufC3AojDup3JipffTqTJ8AIHbABiNFuVAX8Kz%2BS9xoc7G74IYPRNY5S28In7Ckz%2Frt25YnOIKQutrwQJrwp39LWJUm%2B7fQ2Z4VOZr20qVNzEgHnM1vgfGRhBQ7lbUcFM4Vkj49ZIJOz3e5rpJi3BevJVY30LVoL%2BtQ%2Fo0iTSWuodkoI0XqzrqJNajrapvLIDx8uxKHoo%2BVPYxRY8bazYeobFHCmX16ijSu4Q7YgGdbtNpul7btTCD8JrBBjqkAZtAmxA2Ql8lhprAmk2veye0enG7ZglTS2xiuADAEsB4e%2BtZHiN41ZgjtzDoItQJANTWsgxPw2Nq8mR1YY%2FT76NOX3IcH7NySu4a0G%2BptpyoNMoKPKRvf5E3vwM4HAeXwGFMnchuFCTY4DvOhhiNZLJ14POmnwcFuF%2B%2BgdI2Hv2HqyviuvvXUH0UE%2BgxOCrhnIBe%2FTCPnf5Gnv9Ho3ArsR8FHxEP&X-Amz-Signature=972a3e402a00fe9ea7e62f15eee46571d0fc62c05646e631263163518667e006&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "title": "prod-files-secure.s3.us-west-2.amazonaws.com",
+    "description": "",
+    "image": "/default-ogp.jpg",
+    "domain": "prod-files-secure.s3.us-west-2.amazonaws.com"
+  },
+  "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/80184bb1-7a3d-4781-bc43-9687c9b7f99d/%E5%BE%85%E3%81%A1%E8%A1%8C%E5%88%97%E7%90%86%E8%AB%96.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VWB73NHM%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDB0BZ2EhIHhPpOvAs6kYbFvDQM1CP87XDIXSQqLFfL6wIhAMelIWHuyOVJqXQrPN0C7GQZ58O%2FoXKJyZDOZmykzU8MKv8DCD0QABoMNjM3NDIzMTgzODA1IgwJkY5PdfYvMS5RfWkq3APvkvooVwURzwVEVnVJHZvYWunu9CFqimHHbU4a8RmxUASSMGOYIKYQhsdwxQcpRaiQEeI%2B0o9SQtHzz%2BvMTlN%2Be6OwVxRKr3xGnolsc5baDA3Zu5RTOvJTmJXXxzqwHWLTvw4XD1pFZL%2FxiNhjVePUmhcxSpW%2BBRs%2F7N8m%2Fky6uqbVfYCzBw3a8kMLIk0q7fupWuFRfYO%2F20tWxdM5tDngkFf5WtjloLC7p13dFebjeBkNtLEGUUZqRaXAuebZz5l17WAXufE9eLhz32kP68XVJUoFod%2FT5XT6lZC1kl%2B0kNjahy1mcMezfCB7xvqxqydxQQg%2FhG5vEL%2FWr57NsKZEHnAWkq8snlMrsEgLTbXGMvfESaPzG%2BP4%2FtD7%2FttAjSWU3Lil1MNufC3AojDup3JipffTqTJ8AIHbABiNFuVAX8Kz%2BS9xoc7G74IYPRNY5S28In7Ckz%2Frt25YnOIKQutrwQJrwp39LWJUm%2B7fQ2Z4VOZr20qVNzEgHnM1vgfGRhBQ7lbUcFM4Vkj49ZIJOz3e5rpJi3BevJVY30LVoL%2BtQ%2Fo0iTSWuodkoI0XqzrqJNajrapvLIDx8uxKHoo%2BVPYxRY8bazYeobFHCmX16ijSu4Q7YgGdbtNpul7btTCD8JrBBjqkAZtAmxA2Ql8lhprAmk2veye0enG7ZglTS2xiuADAEsB4e%2BtZHiN41ZgjtzDoItQJANTWsgxPw2Nq8mR1YY%2FT76NOX3IcH7NySu4a0G%2BptpyoNMoKPKRvf5E3vwM4HAeXwGFMnchuFCTY4DvOhhiNZLJ14POmnwcFuF%2B%2BgdI2Hv2HqyviuvvXUH0UE%2BgxOCrhnIBe%2FTCPnf5Gnv9Ho3ArsR8FHxEP&X-Amz-Signature=b45c0434745a50910c43b43816ac38859f55739b3b93d9ae6100a8d48b525e81&X-Amz-SignedHeaders=host&x-id=GetObject": {
+    "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/80184bb1-7a3d-4781-bc43-9687c9b7f99d/%E5%BE%85%E3%81%A1%E8%A1%8C%E5%88%97%E7%90%86%E8%AB%96.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466VWB73NHM%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDB0BZ2EhIHhPpOvAs6kYbFvDQM1CP87XDIXSQqLFfL6wIhAMelIWHuyOVJqXQrPN0C7GQZ58O%2FoXKJyZDOZmykzU8MKv8DCD0QABoMNjM3NDIzMTgzODA1IgwJkY5PdfYvMS5RfWkq3APvkvooVwURzwVEVnVJHZvYWunu9CFqimHHbU4a8RmxUASSMGOYIKYQhsdwxQcpRaiQEeI%2B0o9SQtHzz%2BvMTlN%2Be6OwVxRKr3xGnolsc5baDA3Zu5RTOvJTmJXXxzqwHWLTvw4XD1pFZL%2FxiNhjVePUmhcxSpW%2BBRs%2F7N8m%2Fky6uqbVfYCzBw3a8kMLIk0q7fupWuFRfYO%2F20tWxdM5tDngkFf5WtjloLC7p13dFebjeBkNtLEGUUZqRaXAuebZz5l17WAXufE9eLhz32kP68XVJUoFod%2FT5XT6lZC1kl%2B0kNjahy1mcMezfCB7xvqxqydxQQg%2FhG5vEL%2FWr57NsKZEHnAWkq8snlMrsEgLTbXGMvfESaPzG%2BP4%2FtD7%2FttAjSWU3Lil1MNufC3AojDup3JipffTqTJ8AIHbABiNFuVAX8Kz%2BS9xoc7G74IYPRNY5S28In7Ckz%2Frt25YnOIKQutrwQJrwp39LWJUm%2B7fQ2Z4VOZr20qVNzEgHnM1vgfGRhBQ7lbUcFM4Vkj49ZIJOz3e5rpJi3BevJVY30LVoL%2BtQ%2Fo0iTSWuodkoI0XqzrqJNajrapvLIDx8uxKHoo%2BVPYxRY8bazYeobFHCmX16ijSu4Q7YgGdbtNpul7btTCD8JrBBjqkAZtAmxA2Ql8lhprAmk2veye0enG7ZglTS2xiuADAEsB4e%2BtZHiN41ZgjtzDoItQJANTWsgxPw2Nq8mR1YY%2FT76NOX3IcH7NySu4a0G%2BptpyoNMoKPKRvf5E3vwM4HAeXwGFMnchuFCTY4DvOhhiNZLJ14POmnwcFuF%2B%2BgdI2Hv2HqyviuvvXUH0UE%2BgxOCrhnIBe%2FTCPnf5Gnv9Ho3ArsR8FHxEP&X-Amz-Signature=b45c0434745a50910c43b43816ac38859f55739b3b93d9ae6100a8d48b525e81&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "title": "prod-files-secure.s3.us-west-2.amazonaws.com",
+    "description": "",
+    "image": "/default-ogp.jpg",
+    "domain": "prod-files-secure.s3.us-west-2.amazonaws.com"
+  },
+  "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/bc9a7be6-fdbe-46c0-9ec8-51a449b6e738/250425_2025%E5%B9%B4%E5%BA%A6%E6%B5%81%E9%80%9A%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%E6%BC%94%E7%BF%92_%E5%9D%82%E4%BA%95.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664JKRTC32%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCCQorXgMHcEvZyllPjeuh%2FX00vxwcON8d7SXPQmxK64AIhAPy%2Bmk2jRpWKKfcdTXCvq406tqpcTwdVZ9ySC3fxEj%2B8Kv8DCD0QABoMNjM3NDIzMTgzODA1IgwDv%2B9k6A2ORAay52cq3AP3HDPnAc5F3CcZKz%2FotO1fWSBekICvXFbqJBdpop7BJBViRj4He2ka73iu%2B6WrrwXy%2BiZ75ioNTjkSqr5TGdjn3tVZmgRDTClYTYXWD%2FX%2BsAjZCq%2F%2FguO%2BoM3ZnzVjhPgCBiw7dr6y6P0MXfFD4dmnqkWyql72vWIVSU7nub4Sic5fv0tk4AqqPIS10pZr1MAUJkvvj3mgjdGMhUxMVeOXtUSMr20KmBQylGkBZ5QzFebzsuJE5KUHzDHDtut8sW5b9tJvycTdU89kSeGjTGk4cpR5Btfhd4PkhW%2FVO8F4T%2B8tnpK03zS0nXunKqDooFbvaflJFeJWNhToGbxtQ8le4jZAGBr%2Bf93QxcwwF%2BYlgd9KkoJycCQ7vKwUy9VH6jatpJDYf%2BtSjDqmnZOkuc2wtsAD3GnAlaww2QWS9SaezE%2BNEKuwUzGhmJ6JQ37%2FysVq4BuPLvNmXeStgJwqKly835lRLYpQDteIo7%2FOFxcWdjeKnwq62ydrMzHZBcbcr7IzHE1HUjVio2hpITVn45DXmGBywiMmzO%2FPMgv1dqBRe4gtHF24gWS291hs0Q2Ra3ukl1%2FtTJwaW5OR4GSeuZSbvo%2BELoaQvIQCiIiQOq23pW3kfL1Se6Tl1JN0fjDb75rBBjqkAV99Idj0jSFEt6oojn1OQhVBQugx6%2BKLoaRuJuwW8FYkn0splK60bKZrwSMN%2BS9WFWsgVwfJHQy66cYB7c9HOJQ73C1pnJTe0%2FHNd2F%2Fo%2F7glkajTEfifKBhQaxJKgWUmDuwhJpmkpaDUVYIqAGIR9clZFLukEkrY7yio%2Fn7SMvCoVnaqa%2BrI0B4s9noJ6ZMHXyhsLNTpcWdzIEGtoktBqn8lmOM&X-Amz-Signature=60d2e1e3a0f9fcc21e1f1846599f719db9c3d62ec8817d4137ede75606daca62&X-Amz-SignedHeaders=host&x-id=GetObject": {
+    "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/869ddd21-7f28-4904-ad9a-084764054f0f/bc9a7be6-fdbe-46c0-9ec8-51a449b6e738/250425_2025%E5%B9%B4%E5%BA%A6%E6%B5%81%E9%80%9A%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6%E6%BC%94%E7%BF%92_%E5%9D%82%E4%BA%95.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4664JKRTC32%2F20250516%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250516T043826Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQCCQorXgMHcEvZyllPjeuh%2FX00vxwcON8d7SXPQmxK64AIhAPy%2Bmk2jRpWKKfcdTXCvq406tqpcTwdVZ9ySC3fxEj%2B8Kv8DCD0QABoMNjM3NDIzMTgzODA1IgwDv%2B9k6A2ORAay52cq3AP3HDPnAc5F3CcZKz%2FotO1fWSBekICvXFbqJBdpop7BJBViRj4He2ka73iu%2B6WrrwXy%2BiZ75ioNTjkSqr5TGdjn3tVZmgRDTClYTYXWD%2FX%2BsAjZCq%2F%2FguO%2BoM3ZnzVjhPgCBiw7dr6y6P0MXfFD4dmnqkWyql72vWIVSU7nub4Sic5fv0tk4AqqPIS10pZr1MAUJkvvj3mgjdGMhUxMVeOXtUSMr20KmBQylGkBZ5QzFebzsuJE5KUHzDHDtut8sW5b9tJvycTdU89kSeGjTGk4cpR5Btfhd4PkhW%2FVO8F4T%2B8tnpK03zS0nXunKqDooFbvaflJFeJWNhToGbxtQ8le4jZAGBr%2Bf93QxcwwF%2BYlgd9KkoJycCQ7vKwUy9VH6jatpJDYf%2BtSjDqmnZOkuc2wtsAD3GnAlaww2QWS9SaezE%2BNEKuwUzGhmJ6JQ37%2FysVq4BuPLvNmXeStgJwqKly835lRLYpQDteIo7%2FOFxcWdjeKnwq62ydrMzHZBcbcr7IzHE1HUjVio2hpITVn45DXmGBywiMmzO%2FPMgv1dqBRe4gtHF24gWS291hs0Q2Ra3ukl1%2FtTJwaW5OR4GSeuZSbvo%2BELoaQvIQCiIiQOq23pW3kfL1Se6Tl1JN0fjDb75rBBjqkAV99Idj0jSFEt6oojn1OQhVBQugx6%2BKLoaRuJuwW8FYkn0splK60bKZrwSMN%2BS9WFWsgVwfJHQy66cYB7c9HOJQ73C1pnJTe0%2FHNd2F%2Fo%2F7glkajTEfifKBhQaxJKgWUmDuwhJpmkpaDUVYIqAGIR9clZFLukEkrY7yio%2Fn7SMvCoVnaqa%2BrI0B4s9noJ6ZMHXyhsLNTpcWdzIEGtoktBqn8lmOM&X-Amz-Signature=60d2e1e3a0f9fcc21e1f1846599f719db9c3d62ec8817d4137ede75606daca62&X-Amz-SignedHeaders=host&x-id=GetObject",
+    "title": "prod-files-secure.s3.us-west-2.amazonaws.com",
+    "description": "",
+    "image": "/default-ogp.jpg",
+    "domain": "prod-files-secure.s3.us-west-2.amazonaws.com"
+  },
+  "https://bmi921.github.io/": {
+    "url": "https://bmi921.github.io/",
+    "title": "bmi921.github.io",
+    "description": "",
+    "image": "/default-ogp.jpg",
+    "domain": "bmi921.github.io"
+  },
+  "https://github.com/bmi921/logistics-cluster-cvrp/blob/main/output/centers.csv": {
+    "url": "https://github.com/bmi921/logistics-cluster-cvrp/blob/main/output/centers.csv",
+    "title": "logistics-cluster-cvrp/output/centers.csv at main · bmi921/logistics-cluster-cvrp",
+    "description": "ORtools + kepler でCVRPを解く. Contribute to bmi921/logistics-cluster-cvrp development by creating an account on GitHub.",
+    "image": "/ogp/99cd2175108d157588c04758296d1cfc.jpg",
+    "domain": "github.com"
+  },
+  "https://developers.google.com/optimization/routing?hl=ja": {
+    "url": "https://developers.google.com/optimization/routing?hl=ja",
+    "title": "車両ルート決定  |  OR-Tools  |  Google for Developers",
+    "description": "",
+    "image": "/ogp/f5b712a871c984fc5438efdc3077a40c.jpg",
+    "domain": "developers.google.com"
+  },
+  "https://qiita.com/sw1227/items/e7a590994ad7dcd0e8ab": {
+    "url": "https://qiita.com/sw1227/items/e7a590994ad7dcd0e8ab",
+    "title": "緯度経度と平面直角座標の相互変換をPythonで実装する - Qiita",
+    "description": "1. はじめにここでは緯度経度 &lt;-&gt; 平面直角座標の実装（Python）のみ記す。変換式の詳細や平面直角座標系の解説は、長くなるので別途ブログに書いた。緯度経度と平面直角座標の相互変換を実装…",
+    "image": "/ogp/a80bad8a2b18761b2e92ff44974ffb51.jpg",
+    "domain": "qiita.com"
+  },
+  "https://www.jstage.jst.go.jp/article/journalcpij/18/0/18_43/_pdf": {
+    "url": "https://www.jstage.jst.go.jp/article/journalcpij/18/0/18_43/_pdf",
+    "title": "jstage.jst.go.jp",
+    "description": "",
+    "image": "/default-ogp.jpg",
+    "domain": "jstage.jst.go.jp"
+  },
+  "https://github.com/bmi921/logistics-cluster-cvrp": {
+    "url": "https://github.com/bmi921/logistics-cluster-cvrp",
+    "title": "GitHub - bmi921/logistics-cluster-cvrp: ORtools + kepler でCVRPを解く",
+    "description": "ORtools + kepler でCVRPを解く. Contribute to bmi921/logistics-cluster-cvrp development by creating an account on GitHub.",
+    "image": "/ogp/99cd2175108d157588c04758296d1cfc.jpg",
+    "domain": "github.com"
+  }
+}

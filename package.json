@@ -12,10 +12,12 @@
   "dependencies": {
     "@notionhq/client": "^3.0.1",
     "@tailwindcss/typography": "^0.5.16",
+    "cheerio": "^1.0.0",
     "dotenv": "^16.5.0",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.22",
     "next": "15.3.2",
+    "node-fetch": "^3.3.2",
     "notion-to-md": "^3.1.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
