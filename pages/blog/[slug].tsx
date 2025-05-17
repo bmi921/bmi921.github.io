@@ -15,67 +15,6 @@ interface PostProps {
   content: string;
 }
 
-// export default function Post({ frontmatter, content }: PostProps) {
-//   return (
-//     <>
-//       <Head>
-//         {frontmatter.description}
-//         <title>{frontmatter.title}</title>
-//         {frontmatter.description && (
-//           <meta name="description" content={frontmatter.description} />
-//         )}
-//       </Head>
-
-//       {/* <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200"> */}
-//       <article className="max-w-4xl mx-auto px-6 py-12">
-//         {/* ヘッダー部分 */}
-//         <header className="mb-12">
-//           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-//             {frontmatter.title}
-//           </h1>
-
-//           <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-600 dark:text-gray-400 mb-6">
-//             {frontmatter.date && (
-//               <span className="flex items-center">
-//                 <svg
-//                   className="w-5 h-5 mr-1.5"
-//                   fill="none"
-//                   stroke="currentColor"
-//                   viewBox="0 0 24 24"
-//                 >
-//                   <path
-//                     strokeLinecap="round"
-//                     strokeLinejoin="round"
-//                     strokeWidth={2}
-//                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-//                   />
-//                 </svg>
-//                 {new Date(frontmatter.date).toLocaleDateString()}
-//               </span>
-//             )}
-
-//             {frontmatter.tags && frontmatter.tags.length > 0 && (
-//               <div className="flex flex-wrap gap-2">
-//                 {frontmatter.tags.map((tag) => (
-//                   <span
-//                     key={tag}
-//                     className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-//                   >
-//                     {tag}
-//                   </span>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-//         </header>
-//         {/* <div className="" dangerouslySetInnerHTML={{ __html: content }} /> */}
-//         <MarkdownPreview content={content} />
-//       </article>
-//       {/* </div> */}
-//     </>
-//   );
-// }
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const postsDir = path.join(process.cwd(), "content/posts");
   const filenames = fs.readdirSync(postsDir);
@@ -115,7 +54,7 @@ export default function Post({ frontmatter, content }: PostProps) {
         )}
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 flex justify-center px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 flex justify-center px-4 sm:px-6 lg:px-8">
         <article className="w-full max-w-3xl py-12">
           {/* ヘッダー部分 */}
           <header className="mb-10">
