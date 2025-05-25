@@ -1,3 +1,4 @@
+import dotenv from "dotenv";
 import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -5,6 +6,7 @@ import matter from "gray-matter";
 import Head from "next/head";
 import MarkdownPreview from "@/components/markdown-preview";
 
+dotenv.config({ path: ".env.production" });
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 interface PostProps {
