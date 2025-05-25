@@ -59,7 +59,10 @@ export default function Post({ frontmatter, content, slug }: PostProps) {
           <meta name="description" content={frontmatter.description} />
         )}
 
-        <meta property="og:image" content={`${siteUrl}/ogp/${slug}.png`} />
+        <meta
+          property="og:image"
+          content={`${siteUrl}/ogp/posts/${slug}.png`}
+        />
       </Head>
 
       <main className="min-h-screen from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 flex justify-center px-4 sm:px-6 lg:px-8">
