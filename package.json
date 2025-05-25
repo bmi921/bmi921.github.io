@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx ts-node scripts/fetchNotion.ts && next dev",
-    "build": "npx ts-node scripts/fetchNotion.ts && build",
+    "build": "npx ts-node scripts/fetchNotion.ts && next build",
     "start": "next start",
     "lint": "next lint"
   },
