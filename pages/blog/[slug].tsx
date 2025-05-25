@@ -58,13 +58,33 @@ export default function Post({ frontmatter, content, slug }: PostProps) {
         <title>{frontmatter.title}</title>
 
         {frontmatter.description && (
-          <meta name="description" content={frontmatter.description} />
+          <>
+            <meta name="description" content={frontmatter.description} />
+            <meta property="og:description" content={frontmatter.description} />
+            <meta
+              name="twitter:description"
+              content={frontmatter.description}
+            />
+          </>
         )}
 
+        <meta property="og:title" content={frontmatter.title} />
         <meta
           property="og:image"
           content={`${siteUrl}/ogp/posts/${slug}.png`}
         />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${siteUrl}/posts/${slug}`} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta
+          name="twitter:image"
+          content={`${siteUrl}/ogp/posts/${slug}.png`}
+        />
+        {/* 必要なら以下の行に自分の Twitter アカウントを追加 */}
+        <meta name="twitter:site" content="@bmi921" />
       </Head>
 
       <main className="min-h-screen from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 flex justify-center px-4 sm:px-6 lg:px-8">
