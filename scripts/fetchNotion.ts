@@ -23,8 +23,8 @@ async function main() {
   // await fetchOgps();
   // console.log("✅ OGP画像取得完了");
 
-  await generateOgpData();
-  console.log("✅ OGPデータ取得完了");
+  // await generateOgpData();
+  // console.log("✅ OGPデータ取得完了");
 }
 
 main().catch((err) => {

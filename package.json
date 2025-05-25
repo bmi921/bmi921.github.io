@@ -6,8 +6,8 @@
     "dev": "npm run prebuild && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prebuild": "tsx scripts/fetchNotion.ts"
+    "export": "next export",
+    "lint": "next lint"
   },
   "dependencies": {
     "@notionhq/client": "^3.0.1",
@@ -19,6 +19,7 @@
     "next": "15.3.2",
     "node-fetch": "^3.3.2",
     "notion-to-md": "^3.1.9",
+    "puppeteer": "^24.9.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
