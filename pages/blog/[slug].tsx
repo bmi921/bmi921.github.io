@@ -76,14 +76,12 @@ export default function Post({ frontmatter, content, slug }: PostProps) {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${siteUrl}/posts/${slug}`} />
 
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={frontmatter.title} />
         <meta
           name="twitter:image"
           content={`${siteUrl}/ogp/posts/${slug}.png`}
         />
-        {/* 必要なら以下の行に自分の Twitter アカウントを追加 */}
         <meta name="twitter:site" content="@bmi921" />
       </Head>
 

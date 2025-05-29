@@ -39,7 +39,7 @@ const generateOGP = async (title: string, slug: string) => {
 
   await browser.close();
 
-  console.log(`✅ 画像を生成しました: ${outputPath}`);
+  console.log(`✅ 自分のサイトのOGP画像を生成しました: ${outputPath}`);
 };
 
 generateOGP("OGP画像を生成するTypeScriptで改行もサポート", "sakai-ex");
