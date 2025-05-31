@@ -30,13 +30,18 @@ export const OgpCard: React.FC<OgpCardProps> = ({ href }) => {
     >
       <div className="flex">
         <div className="w-48">
-          <img
+          {/* <img
             src={data.image}
             alt={data.title}
             className="object-cover"
             onError={(e) => {
               (e.target as HTMLImageElement).src = "/default-ogp.jpg";
             }}
+          /> */}
+          <img
+            src="/default-ogp.jpg"
+            alt={data.title}
+            className="object-cover"
           />
         </div>
         <div className="p-2 flex-1">

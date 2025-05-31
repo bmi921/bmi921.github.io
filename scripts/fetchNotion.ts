@@ -1,9 +1,11 @@
-import "dotenv/config";
 import { NotionExporter } from "../lib/notionToMarkdown";
 import fs from "fs";
 import path from "path";
 import { fetchOgps } from "./fetchOgps";
 import { generateOgpData } from "./ogp-generator";
+import dotenv from "dotenv";
+
+dotenv.config({ path: ".env.production" });
 
 const OUTPUT_DIR = path.join(process.cwd(), "content/posts");
 
@@ -23,8 +25,8 @@ async function main() {
   // await fetchOgps();
   // console.log("✅ OGP画像取得完了");
 
-  await generateOgpData();
-  console.log("✅ OGPデータ取得完了");
+  // await generateOgpData();
+  // console.log("✅ OGPデータ取得完了");
 }
 
 main().catch((err) => {

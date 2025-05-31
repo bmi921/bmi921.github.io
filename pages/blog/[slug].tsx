@@ -1,9 +1,13 @@
+import dotenv from "dotenv";
 import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
 import MarkdownPreview from "@/components/markdown-preview";
+
+dotenv.config({ path: ".env.production" });
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 interface PostProps {
   frontmatter: {
@@ -13,6 +17,7 @@ interface PostProps {
     description?: string;
   };
   content: string;
+  slug: string;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -28,6 +33,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string;
   const filePath = path.join(
     process.cwd(),
     "content/posts",
@@ -40,18 +46,43 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       frontmatter: data,
       content: content.toString(),
+      slug,
     },
   };
 };
 
-export default function Post({ frontmatter, content }: PostProps) {
+export default function Post({ frontmatter, content, slug }: PostProps) {
   return (
     <>
       <Head>
         <title>{frontmatter.title}</title>
+
         {frontmatter.description && (
-          <meta name="description" content={frontmatter.description} />
+          <>
+            <meta name="description" content={frontmatter.description} />
+            <meta property="og:description" content={frontmatter.description} />
+            <meta
+              name="twitter:description"
+              content={frontmatter.description}
+            />
+          </>
         )}
+
+        <meta property="og:title" content={frontmatter.title} />
+        <meta
+          property="og:image"
+          content={`${siteUrl}/ogp/posts/${slug}.png`}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${siteUrl}/posts/${slug}`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta
+          name="twitter:image"
+          content={`${siteUrl}/ogp/posts/${slug}.png`}
+        />
+        <meta name="twitter:site" content="@bmi921" />
       </Head>
 
       <main className="min-h-screen from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 flex justify-center px-4 sm:px-6 lg:px-8">
