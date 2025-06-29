@@ -9,13 +9,6 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-# 🔧 Technology Stack
-Nextjs, React, Github pages, tailwindcss, MDX... etc
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - Next.js(pages router)
-
 # 😺 Github pages
 this website is static webpage. but i wanna write posts more rich,
 so i load OGP pictures when website is building. 
