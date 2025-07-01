@@ -1,5 +1,5 @@
 {
-  "name": "orbital-orbit",
+  "name": "bmi921.github.io",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,13 +9,17 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/react": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.1",
     "@radix-ui/react-icons": "^1.3.2",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "astro": "^5.10.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "@astrojs/rss": "^4.0.12",
+    "astro": "^5.10.1",
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.2",

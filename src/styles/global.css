@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold text-gray-800 mb-6;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-700 mt-8 mb-4;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-gray-700 mt-6 mb-3;
+  }
+  h4 {
+    @apply text-lg font-semibold text-gray-700 mt-6 mb-3;
+  }
+
+  p {
+    @apply text-gray-600 leading-relaxed mb-4;
+  }
+
+  a {
+    @apply text-gray-600 hover:text-gray-800;
+  }
+
+  ul {
+    @apply list-disc list-inside text-gray-600 mb-4;
+  }
+  ol {
+    @apply list-decimal list-inside text-gray-600 mb-4;
+  }
+  li {
+    @apply mb-2;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    font-family:
+      ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+      'DejaVu Sans Mono', monospace;
+    font-weight: bold;
+    background: linear-gradient(90deg, #d83333 0%, #f041ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
