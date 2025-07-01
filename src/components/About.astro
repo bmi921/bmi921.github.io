@@ -1,0 +1,64 @@
+---
+import Icon from '../assets/icon.jpg';
+---
+
+<main class="max-w-4xl mx-auto flex flex-col p-5">
+  <img src={Icon.src} alt="icon" class="w-64 h-64 mx-auto mb-8 rounded-full" />
+  <h1
+    class="text-5xl md:text-7xl font-bold gradient-text md:whitespace-nowrap text-center"
+  >
+    I'm bmi921.
+  </h1>
+
+  <h1 class="text-4xl font-bold text-gray-800 text-center">Programmer</h1>
+  <div class="mt-8 space-y-6 p-4">
+    <div>
+      <h2 class="text-2xl font-semibold text-gray-700">About</h2>
+      <p class="mt-2 text-gray-600">
+        2020〜2025 茨城工業高等専門学校 国際創造工学科 情報コース
+        <br />
+        2025〜2027 東京海洋大学 海洋工学部 流通情報工学科
+      </p>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold text-gray-700">Skills</h2>
+      <ul class="mt-2 list-disc list-inside text-gray-600">
+        <li>C, Python, JavaScript, Typescript, Java</li>
+        <li>HTML, CSS, JavaScript, React, Astro, Nextjs</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold text-gray-700">Contact</h2>
+      <p class="mt-2 text-gray-600">
+        <a
+          href="mailto:your-email@example.com"
+          class="text-blue-500 hover:underline"
+          >bmi921gm@gmail.com
+        </a>
+        までご連絡ください。
+      </p>
+    </div>
+
+    <style>
+      .hero {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px;
+        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+      }
+
+      .gradient-text {
+        font-family:
+          ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+          'DejaVu Sans Mono', monospace;
+        font-weight: bold;
+        background: linear-gradient(90deg, #d83333 0%, #f041ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </div>
+</main>

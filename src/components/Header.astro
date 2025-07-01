@@ -1,5 +1,5 @@
 ---
-// src/components/Header.astro
+import { GitHubLogoIcon } from '@radix-ui/react-icons';
 ---
 
 <header class="bg-transparent">
@@ -8,9 +8,18 @@
       <a href="/">bmi921</a>
     </div>
     <div class="flex space-x-4">
-      <a href="/about" class="text-gray-600 hover:text-gray-800">about</a>
       <a href="/blog" class="text-gray-600 hover:text-gray-800">blog</a>
       <a href="/works" class="text-gray-600 hover:text-gray-800">works</a>
+      <a
+        href="https://github.com/bmi921"
+        class="text-gray-600 hover:text-gray-800"
+      >
+        <GitHubLogoIcon
+          width="28"
+          height="28"
+          className="ml-2 text-gray-800 hover:text-gray-800"
+        /></a
+      >
     </div>
   </nav>
 </header>
