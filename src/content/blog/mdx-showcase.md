@@ -2,7 +2,7 @@
 title: 'Markdown Showcase'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jun 19 2024'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+# heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 
 このページは、`global.css`で定義されたスタイルが、MDX（Markdown）コンテンツにどのように適用されるかを示すためのショーケースです。
@@ -17,21 +17,11 @@ h1からh6までの見出しです。h1は`gradient-text`クラスが自動的�
 
 ### これがH3見出しです
 
-#### これがH4見出しです
-
-##### これがH5見出しです
-
-###### これがH6見出しです
-
----
-
 ## 段落とリンク
 
 これは通常の段落(pタグ)です。テキストの色や行間が適切に設定されています。この文章は、テキストが長くなった場合にどのように折り返されるかを示すためのダミーテキストです。Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 文章中には[Astroの公式サイト](https://astro.build)のようなリンク(aタグ)を埋め込むことができます。ホバーすると下線が表示されます。
-
----
 
 ## インライン要素
 
@@ -42,14 +32,10 @@ h1からh6までの見出しです。h1は`gradient-text`クラスが自動的�
 文章の一部を<mark>ハイライト</mark>したい場合は `mark` タグが使えます。
 <abbr title="HyperText Markup Language">HTML</abbr>のような略語には `abbr` タグで正式名称をツールチップ表示できます。
 
----
-
 ## 引用 (Blockquote)
 
 > The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life.  
 > — <cite>Bill Gates</cite>
-
----
 
 ## リスト (Lists)
 
@@ -76,8 +62,6 @@ h1からh6までの見出しです。h1は`gradient-text`クラスが自動的�
   - パン
   - チーズ
 
----
-
 ## テーブル (Table)
 
 | ヘッダー1 | ヘッダー2   | ヘッダー3   |
@@ -85,8 +69,6 @@ h1からh6までの見出しです。h1は`gradient-text`クラスが自動的�
 | セル1-1   | セル1-2     | セル1-3     |
 | セル2-1   | セ\_ル\_2-2 | **セル2-3** |
 | セル3-1   | `セル3-2`   | セル3-3     |
-
----
 
 ## コードブロック (Code Block)
 
