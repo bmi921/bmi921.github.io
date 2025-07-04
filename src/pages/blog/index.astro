@@ -11,14 +11,14 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout>
-  <main class="max-w-6xl mx-auto p-5 md:p-8">
+  <main class="max-w-4xl mx-auto">
     <section class="mt-5">
-      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ul class="flex flex-col m-3">
         {
           posts.map((post) => (
-            <li class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+            <li>
               <a href={`/blog/${post.id}/`}>
-                {post.data.heroImage && (
+                {/* {post.data.heroImage && (
                   <Image
                     width={720}
                     height={360}
@@ -26,12 +26,12 @@ const posts = (await getCollection('blog')).sort(
                     alt={post.data.title}
                     class="w-full h-48 object-cover"
                   />
-                )}
-                <div class="p-6">
-                  <h4 class="text-xl font-bold text-gray-800 mb-2 truncate">
+                )} */}
+                <div class="p-1">
+                  <h4 class="text-xl text-pink-500 font-bold  truncate underline">
                     {post.data.title}
                   </h4>
-                  <p class="text-sm text-gray-600">
+                  <p class="text-sm text-pink-500">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
                 </div>

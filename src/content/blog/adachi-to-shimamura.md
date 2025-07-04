@@ -1,6 +1,6 @@
 ---
-title: '厨二病だった時に、安達としまむらを読んでいた話'
-description: '安達としまむらの感想'
+title: '幸せというにしては不幸だが、不幸というにしては幸せだ'
+description: 'なる'
 pubDate: '2024-07-03'
 # heroImage: '../../assets/adachi-to-shimamura-1.jpg'
 ---
