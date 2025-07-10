@@ -187,6 +187,12 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 
 ## Other Elements — abbr, sub, sup, kbd, mark
 
+### Number
+
+1. aaa
+2. bbb
+3. ccc
+
 ### Syntax
 
 ```markdown

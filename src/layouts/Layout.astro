@@ -1,6 +1,4 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import background from '../assets/background.svg';
 ---
 
@@ -13,11 +11,11 @@ import background from '../assets/background.svg';
     <meta name="generator" content={Astro.generator} />
     <title>bmi921.github.io</title>
   </head>
-  <body class="min-h-screen flex flex-col">
-    <Header />
+  <body class="min-h-screen relative">
     <img src={background.src} alt="" class="background" />
-    <slot />
-    <Footer />
+    <div class="flex flex-col flex-grow justify-center items-center z-10">
+      <slot />
+    </div>
   </body>
 </html>
 

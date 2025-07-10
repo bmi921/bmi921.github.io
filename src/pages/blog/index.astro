@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -11,6 +12,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout>
+  <Header />
   <main
     class="max-w-4xl container mx-auto p-2 flex justify-between items-center"
   >
