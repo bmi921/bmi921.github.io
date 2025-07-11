@@ -19,7 +19,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
   <body>
     <Header />
-    <img src={background.src} alt="" class="background" />
+    <!-- <img src={background.src} alt="" class="background" /> -->
     <main class="max-w-4xl mx-auto">
       <article class="m-6">
         <div>
@@ -53,6 +53,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 </html>
 
 <style>
+  html {
+    font-size: 14px;
+  }
   body {
     margin: 0;
     width: 100%;
