@@ -1,3 +1,6 @@
+# 🗒️ What is this repogitory?
+This is my blog and portfolio website. 
+
 # 🚀 Getting Started
 
 First, run the development server:
