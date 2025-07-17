@@ -3,7 +3,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
-import Layout from '../../layouts/Layout.astro';
+import BlogLayout from '../../layouts/BlogLayout.astro';
 import Header from '../../components/Header.astro';
 
 const posts = (await getCollection('blog')).sort(
@@ -11,7 +11,7 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<Layout>
+<BlogLayout>
   <Header />
   <main
     class="max-w-4xl container mx-auto p-2 flex justify-between items-center"
@@ -46,4 +46,4 @@ const posts = (await getCollection('blog')).sort(
       </ul>
     </section>
   </main>
-</Layout>
+</BlogLayout>
