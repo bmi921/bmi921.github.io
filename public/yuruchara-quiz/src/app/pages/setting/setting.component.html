@@ -1,0 +1,83 @@
+<div class="setting-container">
+  <div class="card">
+    <h2>出題範囲設定</h2>
+
+    <div class="button-group">
+      <button (click)="selectAll()">全選択</button>
+      <button (click)="deselectAll()">全解除</button>
+    </div>
+    <div class="prefecture-list">
+      <div *ngFor="let prefecture of prefectures" class="prefecture-item">
+        <input
+          type="checkbox"
+          [id]="prefecture"
+          [checked]="isPrefectureSelected(prefecture)"
+          (change)="togglePrefecture(prefecture, $event)"
+        />
+        <label [for]="prefecture">{{ prefecture }}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>クイズ形式</h2>
+    <div class="quiz-type-setting">
+      <label>
+        <input
+          type="radio"
+          name="questionType"
+          value="random"
+          [(ngModel)]="selectedQuestionType"
+          (change)="saveQuestionTypeSetting()"
+        />
+        ランダム：名前と出身県をランダムにクイズにします。
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="questionType"
+          value="name"
+          [(ngModel)]="selectedQuestionType"
+          (change)="saveQuestionTypeSetting()"
+        />
+        名前：ゆるキャラの名前を当てるクイズを出します。
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="questionType"
+          value="prefecture"
+          [(ngModel)]="selectedQuestionType"
+          (change)="saveQuestionTypeSetting()"
+        />
+        出身県：ゆるキャラの出身県のクイズを出します。
+      </label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>隠し画像モード（上級者向け）</h2>
+    <div class="hint-setting-item">
+      <input
+        type="checkbox"
+        id="hiddenImageToggle"
+        [checked]="isHiddenImageEnabled"
+        (change)="toggleHiddenImageSetting($event)"
+      />
+      <label for="hiddenImageToggle">画像を隠す</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>ヒント機能設定</h2>
+    <div class="hint-setting-item">
+      <input
+        type="checkbox"
+        id="hintToggle"
+        [checked]="isHintEnabled"
+        (change)="toggleHintSetting($event)"
+      />
+      <label for="hintToggle">Geminiがヒントを生成します</label>
+    </div>
+  </div>
+</div>
