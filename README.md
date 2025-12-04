@@ -1,14 +1,4 @@
-# 🚀 Getting Started
+# 🚀 website
 
-First, run the development server:
-
-```bash
-git clone https://github.com/bmi921/bmi921.github.io
-cd ./bmi921.github.io
-npm install
-npm run dev
-```
-
-# 😺 Github pages
-this website is static webpage. but i wanna write posts more rich,
-so i load OGP pictures when website is building. 
+- [ゆるキャラクイズ](https://bmi921.github.io/yuruchara-quiz/#/)
+- [irealB-player](https://bmi921.github.io/irealb-player/)
