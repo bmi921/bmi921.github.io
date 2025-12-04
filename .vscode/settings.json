@@ -1,8 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "css.validate": false, // global.cssでの警告を無効化
-
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
-  }
-}
