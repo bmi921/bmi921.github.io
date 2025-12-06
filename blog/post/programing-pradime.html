@@ -1,0 +1,150 @@
+<!DOCTYPE html><!--Hz7WUFfo_Gyfa6SCoaFJP--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/blog/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/blog/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/blog/_next/static/chunks/394667a86f9377cf.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/blog/_next/static/chunks/cbd55ab9639e1e66.js"/><script src="/blog/_next/static/chunks/1abc3924204d7dd0.js" async=""></script><script src="/blog/_next/static/chunks/9c23f44fff36548a.js" async=""></script><script src="/blog/_next/static/chunks/6a867cb065f04bb0.js" async=""></script><script src="/blog/_next/static/chunks/turbopack-04a1916942e34311.js" async=""></script><script src="/blog/_next/static/chunks/ff1a16fafef87110.js" async=""></script><script src="/blog/_next/static/chunks/247eb132b7f7b574.js" async=""></script><script src="/blog/_next/static/chunks/796e69ae18b2784c.js" async=""></script><meta name="next-size-adjust" content=""/><title>プログラミングパラダイムの変遷史：構造化からオブジェクト指向、そして関数型との融合へ</title><meta name="description" content="なぜネット上で原理主義者が対立してしまうのか？"/><link rel="icon" href="/blog/favicon.ico?favicon.0b3bf435.ico" sizes="256x256" type="image/x-icon"/><script src="/blog/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script></head><body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased"><div hidden=""><!--$--><!--/$--></div><div class="min-h-screen bg-zinc-50 text-zinc-900"><div class="mx-auto max-w-3xl px-6 py-12"><a class="text-sm text-zinc-500 transition hover:text-zinc-800" href="/blog">← Back to list</a><p class="mt-6 text-xs uppercase tracking-[0.2em] text-zinc-500">2025年12月01日</p><h1 class="mt-2 text-3xl font-semibold tracking-tight text-zinc-950">プログラミングパラダイムの変遷史：構造化からオブジェクト指向、そして関数型との融合へ</h1><div class="mt-3 flex flex-wrap gap-2"><span class="rounded-full bg-zinc-200 px-3 py-1 text-xs text-zinc-800">アイデア</span></div><article class="post-body mt-8 leading-relaxed text-zinc-800"><h1>なぜ遡る必要があるのか？</h1>
+<p><strong>※ 本記事はソフトウェア開発の経験が浅い駆け出しエンジニアの学生によるものです。内容の正確性は保証しません。記事の執筆にあたり、生成 AI を用いています。自分が書いた文章は緑色の note で囲ってます！</strong></p>
+<p>ソフトウェア開発の歴史は、「増大し続けるシステムの複雑さ」といかに戦うかという歴史そのものです。</p>
+<p>この記事では、プログラミングパラダイムがどのように進化し、現代のマルチパラダイム（オブジェクト指向と関数型の融合）へと至ったのか、その必然的な流れを「構造化プログラミング」まで遡って解説します。</p>
+<p>:::note
+意外とですが、プログラミングのパラダイム（主流の考え方や概念）の変遷について書いている記事が少ないです。ネットだとそのパラダイムシフトについていけない、もしくは古いパラダイムしか知らない人 vs 新しいパラダイムしか知らない人で喧嘩っぽくなってることも多いので、一応知っておくとそういった議論に巻き込まれなくて済んで良いかなーと。オブジェクト指向と関数型プログラミングで戦ってたり、アーキテクチャのあれこれで戦っている人とか、色々あります。
+:::</p>
+<h2>1. 混沌からの脱却：構造化プログラミング (1960s - 1970s)</h2>
+<h3>💀 背景：スパゲッティコードの時代</h3>
+<p>初期のプログラミング（アセンブリ言語や初期の FORTRAN など）では、処理の流れを制御するために <code>GOTO</code> 文が乱用されていました。<br>
+プログラムの規模が大きくなるにつれ、あちこちに処理が飛ぶコードは <strong>「スパゲッティコード」</strong> となり、可読性と保守性は壊滅的でした。</p>
+<p>:::note
+GOTO 文とは、何行目に飛んでね〜っていう可読性が低いものです。COBOL, FORTRAN,C, C++, BASIC みたいな古い低レイヤーまで書ける言語に<code>GOTO</code>が残っていることが多いです。
+ですが、C++, C などでは著しく可読性を下げるので、使うのはおすすめされてないっぽいです。自分は調べるまで見たことなかったです。
+:::</p>
+<h3>💡 解決策：制御構造の導入</h3>
+<p>この状況を一変させたのが、1968 年の Edsger W. Dijkstra による提言「Go To Statement Considered Harmful（GOTO 文は有害である）」と構造化プログラミングの概念です。</p>
+<p><strong>基本原理: あらゆるプログラムは、以下の 3 つの制御構造だけで記述できる</strong></p>
+<ul>
+<li><strong>順次 (Sequence)</strong>: 上から下へ実行する</li>
+<li><strong>選択 (Selection)</strong>: <code>if</code>、<code>switch</code> などによる分岐</li>
+<li><strong>反復 (Iteration)</strong>: <code>for</code>、<code>while</code> などによる繰り返し</li>
+</ul>
+<h3>🎯 達成したこと</h3>
+<p>無制限なジャンプを排除し、プログラムを論理的なブロックとして扱えるようにしました。<br>
+これにより、コードの流れが予測可能になり、大規模なアルゴリズムの実装が可能になりました（C 言語や Pascal の隆盛）。</p>
+<p>:::note
+やっぱり、<code>goto</code>文でコードの可読性や保守性が低くなるので、ダイクストラさんがこういったパラダイムを導入したのだと思います。COBOL エンジニアの給料が高いみたいな話を巷では聞きますが、正直こういった言語を書きたいと思う人は少ないのかなーと思います。
+:::</p>
+<h2>2. 状態管理の危機：オブジェクト指向プログラミング (1980s - 1990s)</h2>
+<h3>💀 背景：グローバル変数の地獄</h3>
+<p>構造化プログラミングによってロジックの流れは整理されましたが、GUI（グラフィカルユーザーインターフェース）の登場やシステムの大規模化に伴い、新たな問題が発生しました。<br>
+それは、「データ（状態）」の管理です。</p>
+<p>多くの関数がグローバル変数を共有し変更し合う構造は、どこでデータが壊れたのかを追跡することを困難にしました。</p>
+<p>:::note
+自分は大規模でも、１ファイル 1000-2000 行のプログラムしか書いたことないので、そこまでグローバル変数が管理しにくくて、状態が分かりにくい！って思ったことはないですが、3000 行ぐらいからそういう問題が起きるのかなーと思います。
+:::</p>
+<h3>💡 解決策：データと手続きのカプセル化</h3>
+<p>この複雑さに対抗するために普及したのが、オブジェクト指向プログラミング (OOP) です（Smalltalk, C++, Java）。</p>
+<p><strong>基本原理: 現実世界の事象を「モノ（Object）」としてモデル化する</strong></p>
+<ul>
+<li><strong>カプセル化 (Encapsulation)</strong><br>
+データ（状態）と、それを操作する手続き（メソッド）を一つのクラスの中に閉じ込めること。<br>
+外部からは許可されたメソッド経由でしかデータを触れないようにすることで、<strong>「誰がデータを変更したか」</strong> を明確にしました。</li>
+</ul>
+<p>:::note
+状態を管理するために、オブジェクト指向的なパラダイムを入れたのは、いいんですが、<code>GOTO</code>文の二の舞になってしまったという感じです。
+なぜなら、大規模になることを防ぐためにオブジェクトで管理しようとしているのに、オブジェクトごとにファイルを分けるわけですから、ファイル移動が激しくなりました。なんか本末転倒感があります。
+この本末転倒感を後々、払拭するのが現在の React の思想だと思います。コンポーネントとしてまとめてよう、機能＋見た目＋状態を一つのファイルにまとめて JSX にしよう、みたいなパラダイムはここのアンチが増えたからできてます。
+:::</p>
+<h3>🎯 達成したこと</h3>
+<ul>
+<li><strong>再利用性</strong>: 継承やポリモーフィズムにより、コードの重複を削減。</li>
+<li><strong>保守性</strong>: 責務をオブジェクト単位に分割することで、巨大なシステムを人間が理解可能なサイズに分割統治しました。</li>
+</ul>
+<p>::: note
+ここが一番の問題です。オブジェクトが増えるとコード記述があちこち飛ぶので、はっきりいってクッソ保守がしずらいです。しかもそれぞれのオブジェクトが
+別に、適度（これが難しいけど）にオブジェクト指向を導入する分には、メリットの方が多いと感じているのですが、java といえば、オブジェクト指向でしょ！みたいな感じで、とりあえずのオブジェクト指向をしている現場が多く、本末転倒なのかなーとか思っています。わかりやすくするための抽象化なのに、やりすぎて、難しくなりすぎる。オブジェクト指向自体は、すごい概念ですが、人間の頭が追いついてないみたいな感じで、実務だとそこまで厳密にやるとわかりづらいのかな。
+ある程度、状態の変化が激しいところはオブジェクト同士ではなく、大きな一つのオブジェクトとして内部でまとめる方が圧倒的にわかりやすいです。
+:::</p>
+<h2>3. 並行処理の壁と信頼性：関数型プログラミングの再評価 (2000s - 現在)</h2>
+<h3>💀 背景：ムーアの法則の限界と副作用</h3>
+<p>2000 年代以降、CPU のクロック周波数の向上は頭打ちとなり、パフォーマンス向上の鍵はマルチコア・分散処理へと移行しました。<br>
+ここで OOP の「状態を持つ（Mutable State）」という特性が足かせとなります。</p>
+<p>複数のスレッドが同時に一つのオブジェクトの状態を変更しようとすると、競合状態 (Race Condition) やデッドロックが発生しやすくなるのです。</p>
+<p>:::note
+ここら辺は知らないです、そうなんですかね。
+:::</p>
+<h3>💡 解決策：不変性と参照透過性</h3>
+<p>ここで、学術界や一部のコミュニティで使われていた関数型プログラミング (FP) の概念が、実用的な解決策として注目されました（Haskell, Erlang, Scala の登場）。</p>
+<p><strong>基本原理: プログラムを数学的な関数の評価として記述する</strong></p>
+<ul>
+<li>
+<p><strong>不変性 (Immutability)</strong><br>
+一度作ったデータは変更しない。変更が必要なら新しいデータを作る。<br>
+これにより、スレッドセーフがデフォルトで保証されます。</p>
+</li>
+<li>
+<p><strong>副作用の排除</strong><br>
+関数の出力は入力のみによって決まる（<strong>参照透過性</strong>）。<br>
+これにより、テストが容易になり、挙動が予測可能になります。</p>
+</li>
+</ul>
+<h3>🎯 達成したこと</h3>
+<p>複雑な並行処理やデータ変換ロジックを、<strong>安全かつ宣言的（What to do）</strong> に記述できるようになりました。</p>
+<p>:::note
+なんか一部の研究者がそういっているだけで、持ち上げすぎな気もする、、、
+でも実際、一部の厳密な？変数の管理が必要な場合は、関数型プログラミング言語を使ってたみたいです。
+数学界隈？みたいなところだと、多分言語の綺麗さだとかですごい持ち上げられている？まあ概念自体は面白い？けど全然、実用性を感じない。
+その反面、厨二病みたいな原理主義者も多く沸いているイメージです。
+実際に、そういう人にリアルであったことないので、会ってみたい。
+:::</p>
+<h2>4. 現代の到達点：マルチパラダイムによる統合</h2>
+<h3>🤝 対立から融合へ</h3>
+<p>かつては「OOP vs FP」といった対立構造で語られることもありましたが、現代のモダンな開発においては、これらは相互補完的な関係にあります。</p>
+<p>:::note
+ここの対立が結構ネットで見かける対立です。
+一長一短ではあるんだろうけど、実際じゃあ実務でどうやって使い分けるの？みたいなところで言うと、答えが出るまでに長い経験が必要だと思います。多分、ほとんどのエンジニアが答えられない気がする、知らんけど。
+:::</p>
+<p>多くの現代的な言語（Scala, Kotlin, TypeScript, Swift, Rust, C# など）は、<strong>マルチパラダイム言語</strong> として設計されています。</p>
+<p>:::note
+ここら辺の言語は、実用性！！！！実務で使える！！！！みたいなところで、関数型とオブジェクト指向型のいいとこどりをしています。だから人気です。
+:::</p>
+<h3>🏗️ 現代的なアーキテクチャの標準形</h3>
+<p>両者の「いいとこ取り」をする設計が、現在のデファクトスタンダードになりつつあります。</p>
+<p>| 領域                             | 採用するパラダイム     | 理由                                                                                                                                                |
+| -------------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| システム構造・コンポーネント定義 | オブジェクト指向 (OOP) | ドメインモデルの表現、依存性の注入 (DI)、インターフェースによる抽象化には、クラスベースの設計が適しているため。                                     |
+| データ処理・ロジック記述         | 関数型 (FP)            | データの変換、フィルタリング、非同期処理の連鎖などは、不変データと高階関数（<code>map</code> / <code>filter</code> / <code>reduce</code>）を使った方が簡潔でバグが混入しにくいため。 |</p>
+<p>:::note
+この表から分かる通り、それぞれ分かりやすく書ける分野が違うので、使い分けましょう〜ってことが結論になるのかな？と思います。
+でも、以前としてその使い分けは、これ！と汎用的に言える基準みたいなのが多く、難しいです。
+TPO によるとしか言えないので、使い分けについては経験と深い洞察が必要です。
+そこら辺をまとめている人がいたら知りたいですね。
+:::</p>
+<h3>📝 コード例：融合のイメージ (Scala/TypeScript 風)</h3>
+<pre><code class="language-scala">// 構造（OOP）：データ構造をクラス/型で定義
+case class User(id: Int, name: String, isActive: Boolean)
+
+class UserRepository {
+  // ロジック（FP）：データ処理は関数型のアプローチで記述
+  def getActiveUserNames(users: List[User]): List[String] = {
+    users
+      .filter(user => user.isActive) // 宣言的：条件に合うものを抽出
+      .map(user => user.name)        // 宣言的：名前だけを取り出す
+  }
+}
+</code></pre>
+<p>:::note
+java の後継？みたいな言語の scala が結構いいところどりの言語としては最初で有名みたいです。
+:::</p>
+<h1>まとめ</h1>
+<p>プログラミングパラダイムの変遷は、流行り廃りではなく、ハードウェアの進化とソフトウェアの巨大化に対する「生存戦略」 でした。</p>
+<ul>
+<li>
+<p>構造化プログラミングは、無秩序なロジックに秩序を与えました。</p>
+</li>
+<li>
+<p>オブジェクト指向は、肥大化する 状態（データ） 管理に秩序を与えました。</p>
+</li>
+<li>
+<p>関数型プログラミングは、複雑化する並行処理とデータフローに秩序を与えました。</p>
+</li>
+</ul>
+<p>私たちは今、これらの強力な武器をすべて使える恵まれた時代にいます。
+重要なのは「どれが優れているか」を決めることではなく、「目の前の課題に対して、どのパラダイムの道具を使えば最もシンプルに解決できるか」 を見極める力です。</p>
+<p>:::note
+以上になります。まあ、ネットでそう言う対立があったら、大抵の場合は、どちらかがパラダイムシフトへの変遷について知らないとか、実用性ではなく綺麗な記述に価値を起きすぎているとか、そう言う場合が多いので、実務で役にたつのは今回の記事でのまとめを参考にして、そう言う極端なのは面白いけど無視するべきかなーと思います。AI が言っていることは結構正しい。
+:::</p>
+</article></div></div><!--$--><!--/$--><script src="/blog/_next/static/chunks/cbd55ab9639e1e66.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"default\"]\n3:I[37457,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"default\"]\n5:I[97367,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"OutletBoundary\"]\n6:\"$Sreact.suspense\"\n8:I[97367,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"ViewportBoundary\"]\na:I[97367,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"MetadataBoundary\"]\nc:I[68027,[],\"default\"]\n:HL[\"/blog/_next/static/chunks/394667a86f9377cf.css\",\"style\"]\n:HL[\"/blog/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/blog/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"Hz7WUFfo-Gyfa6SCoaFJP\",\"c\":[\"\",\"post\",\"programing-pradime\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"post\",{\"children\":[[\"slug\",\"programing-pradime\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]},\"$undefined\",\"$undefined\",true],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/blog/_next/static/chunks/394667a86f9377cf.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[\"$L4\",[[\"$\",\"script\",\"script-0\",{\"src\":\"/blog/_next/static/chunks/796e69ae18b2784c.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$6\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@7\"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$L8\",null,{\"children\":\"$@9\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$La\",null,{\"children\":[\"$\",\"$6\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@b\"}]}]}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$c\",[]],\"S\":true}\n"])</script><script>self.__next_f.push([1,"d:I[22016,[\"/blog/_next/static/chunks/796e69ae18b2784c.js\"],\"\"]\ne:T3c3e,"])</script><script>self.__next_f.push([1,"\u003ch1\u003eなぜ遡る必要があるのか？\u003c/h1\u003e\n\u003cp\u003e\u003cstrong\u003e※ 本記事はソフトウェア開発の経験が浅い駆け出しエンジニアの学生によるものです。内容の正確性は保証しません。記事の執筆にあたり、生成 AI を用いています。自分が書いた文章は緑色の note で囲ってます！\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eソフトウェア開発の歴史は、「増大し続けるシステムの複雑さ」といかに戦うかという歴史そのものです。\u003c/p\u003e\n\u003cp\u003eこの記事では、プログラミングパラダイムがどのように進化し、現代のマルチパラダイム（オブジェクト指向と関数型の融合）へと至ったのか、その必然的な流れを「構造化プログラミング」まで遡って解説します。\u003c/p\u003e\n\u003cp\u003e:::note\n意外とですが、プログラミングのパラダイム（主流の考え方や概念）の変遷について書いている記事が少ないです。ネットだとそのパラダイムシフトについていけない、もしくは古いパラダイムしか知らない人 vs 新しいパラダイムしか知らない人で喧嘩っぽくなってることも多いので、一応知っておくとそういった議論に巻き込まれなくて済んで良いかなーと。オブジェクト指向と関数型プログラミングで戦ってたり、アーキテクチャのあれこれで戦っている人とか、色々あります。\n:::\u003c/p\u003e\n\u003ch2\u003e1. 混沌からの脱却：構造化プログラミング (1960s - 1970s)\u003c/h2\u003e\n\u003ch3\u003e💀 背景：スパゲッティコードの時代\u003c/h3\u003e\n\u003cp\u003e初期のプログラミング（アセンブリ言語や初期の FORTRAN など）では、処理の流れを制御するために \u003ccode\u003eGOTO\u003c/code\u003e 文が乱用されていました。\u003cbr\u003e\nプログラムの規模が大きくなるにつれ、あちこちに処理が飛ぶコードは \u003cstrong\u003e「スパゲッティコード」\u003c/strong\u003e となり、可読性と保守性は壊滅的でした。\u003c/p\u003e\n\u003cp\u003e:::note\nGOTO 文とは、何行目に飛んでね〜っていう可読性が低いものです。COBOL, FORTRAN,C, C++, BASIC みたいな古い低レイヤーまで書ける言語に\u003ccode\u003eGOTO\u003c/code\u003eが残っていることが多いです。\nですが、C++, C などでは著しく可読性を下げるので、使うのはおすすめされてないっぽいです。自分は調べるまで見たことなかったです。\n:::\u003c/p\u003e\n\u003ch3\u003e💡 解決策：制御構造の導入\u003c/h3\u003e\n\u003cp\u003eこの状況を一変させたのが、1968 年の Edsger W. Dijkstra による提言「Go To Statement Considered Harmful（GOTO 文は有害である）」と構造化プログラミングの概念です。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e基本原理: あらゆるプログラムは、以下の 3 つの制御構造だけで記述できる\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e順次 (Sequence)\u003c/strong\u003e: 上から下へ実行する\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e選択 (Selection)\u003c/strong\u003e: \u003ccode\u003eif\u003c/code\u003e、\u003ccode\u003eswitch\u003c/code\u003e などによる分岐\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e反復 (Iteration)\u003c/strong\u003e: \u003ccode\u003efor\u003c/code\u003e、\u003ccode\u003ewhile\u003c/code\u003e などによる繰り返し\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e🎯 達成したこと\u003c/h3\u003e\n\u003cp\u003e無制限なジャンプを排除し、プログラムを論理的なブロックとして扱えるようにしました。\u003cbr\u003e\nこれにより、コードの流れが予測可能になり、大規模なアルゴリズムの実装が可能になりました（C 言語や Pascal の隆盛）。\u003c/p\u003e\n\u003cp\u003e:::note\nやっぱり、\u003ccode\u003egoto\u003c/code\u003e文でコードの可読性や保守性が低くなるので、ダイクストラさんがこういったパラダイムを導入したのだと思います。COBOL エンジニアの給料が高いみたいな話を巷では聞きますが、正直こういった言語を書きたいと思う人は少ないのかなーと思います。\n:::\u003c/p\u003e\n\u003ch2\u003e2. 状態管理の危機：オブジェクト指向プログラミング (1980s - 1990s)\u003c/h2\u003e\n\u003ch3\u003e💀 背景：グローバル変数の地獄\u003c/h3\u003e\n\u003cp\u003e構造化プログラミングによってロジックの流れは整理されましたが、GUI（グラフィカルユーザーインターフェース）の登場やシステムの大規模化に伴い、新たな問題が発生しました。\u003cbr\u003e\nそれは、「データ（状態）」の管理です。\u003c/p\u003e\n\u003cp\u003e多くの関数がグローバル変数を共有し変更し合う構造は、どこでデータが壊れたのかを追跡することを困難にしました。\u003c/p\u003e\n\u003cp\u003e:::note\n自分は大規模でも、１ファイル 1000-2000 行のプログラムしか書いたことないので、そこまでグローバル変数が管理しにくくて、状態が分かりにくい！って思ったことはないですが、3000 行ぐらいからそういう問題が起きるのかなーと思います。\n:::\u003c/p\u003e\n\u003ch3\u003e💡 解決策：データと手続きのカプセル化\u003c/h3\u003e\n\u003cp\u003eこの複雑さに対抗するために普及したのが、オブジェクト指向プログラミング (OOP) です（Smalltalk, C++, Java）。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e基本原理: 現実世界の事象を「モノ（Object）」としてモデル化する\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eカプセル化 (Encapsulation)\u003c/strong\u003e\u003cbr\u003e\nデータ（状態）と、それを操作する手続き（メソッド）を一つのクラスの中に閉じ込めること。\u003cbr\u003e\n外部からは許可されたメソッド経由でしかデータを触れないようにすることで、\u003cstrong\u003e「誰がデータを変更したか」\u003c/strong\u003e を明確にしました。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e:::note\n状態を管理するために、オブジェクト指向的なパラダイムを入れたのは、いいんですが、\u003ccode\u003eGOTO\u003c/code\u003e文の二の舞になってしまったという感じです。\nなぜなら、大規模になることを防ぐためにオブジェクトで管理しようとしているのに、オブジェクトごとにファイルを分けるわけですから、ファイル移動が激しくなりました。なんか本末転倒感があります。\nこの本末転倒感を後々、払拭するのが現在の React の思想だと思います。コンポーネントとしてまとめてよう、機能＋見た目＋状態を一つのファイルにまとめて JSX にしよう、みたいなパラダイムはここのアンチが増えたからできてます。\n:::\u003c/p\u003e\n\u003ch3\u003e🎯 達成したこと\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e再利用性\u003c/strong\u003e: 継承やポリモーフィズムにより、コードの重複を削減。\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e保守性\u003c/strong\u003e: 責務をオブジェクト単位に分割することで、巨大なシステムを人間が理解可能なサイズに分割統治しました。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e::: note\nここが一番の問題です。オブジェクトが増えるとコード記述があちこち飛ぶので、はっきりいってクッソ保守がしずらいです。しかもそれぞれのオブジェクトが\n別に、適度（これが難しいけど）にオブジェクト指向を導入する分には、メリットの方が多いと感じているのですが、java といえば、オブジェクト指向でしょ！みたいな感じで、とりあえずのオブジェクト指向をしている現場が多く、本末転倒なのかなーとか思っています。わかりやすくするための抽象化なのに、やりすぎて、難しくなりすぎる。オブジェクト指向自体は、すごい概念ですが、人間の頭が追いついてないみたいな感じで、実務だとそこまで厳密にやるとわかりづらいのかな。\nある程度、状態の変化が激しいところはオブジェクト同士ではなく、大きな一つのオブジェクトとして内部でまとめる方が圧倒的にわかりやすいです。\n:::\u003c/p\u003e\n\u003ch2\u003e3. 並行処理の壁と信頼性：関数型プログラミングの再評価 (2000s - 現在)\u003c/h2\u003e\n\u003ch3\u003e💀 背景：ムーアの法則の限界と副作用\u003c/h3\u003e\n\u003cp\u003e2000 年代以降、CPU のクロック周波数の向上は頭打ちとなり、パフォーマンス向上の鍵はマルチコア・分散処理へと移行しました。\u003cbr\u003e\nここで OOP の「状態を持つ（Mutable State）」という特性が足かせとなります。\u003c/p\u003e\n\u003cp\u003e複数のスレッドが同時に一つのオブジェクトの状態を変更しようとすると、競合状態 (Race Condition) やデッドロックが発生しやすくなるのです。\u003c/p\u003e\n\u003cp\u003e:::note\nここら辺は知らないです、そうなんですかね。\n:::\u003c/p\u003e\n\u003ch3\u003e💡 解決策：不変性と参照透過性\u003c/h3\u003e\n\u003cp\u003eここで、学術界や一部のコミュニティで使われていた関数型プログラミング (FP) の概念が、実用的な解決策として注目されました（Haskell, Erlang, Scala の登場）。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e基本原理: プログラムを数学的な関数の評価として記述する\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e不変性 (Immutability)\u003c/strong\u003e\u003cbr\u003e\n一度作ったデータは変更しない。変更が必要なら新しいデータを作る。\u003cbr\u003e\nこれにより、スレッドセーフがデフォルトで保証されます。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cstrong\u003e副作用の排除\u003c/strong\u003e\u003cbr\u003e\n関数の出力は入力のみによって決まる（\u003cstrong\u003e参照透過性\u003c/strong\u003e）。\u003cbr\u003e\nこれにより、テストが容易になり、挙動が予測可能になります。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e🎯 達成したこと\u003c/h3\u003e\n\u003cp\u003e複雑な並行処理やデータ変換ロジックを、\u003cstrong\u003e安全かつ宣言的（What to do）\u003c/strong\u003e に記述できるようになりました。\u003c/p\u003e\n\u003cp\u003e:::note\nなんか一部の研究者がそういっているだけで、持ち上げすぎな気もする、、、\nでも実際、一部の厳密な？変数の管理が必要な場合は、関数型プログラミング言語を使ってたみたいです。\n数学界隈？みたいなところだと、多分言語の綺麗さだとかですごい持ち上げられている？まあ概念自体は面白い？けど全然、実用性を感じない。\nその反面、厨二病みたいな原理主義者も多く沸いているイメージです。\n実際に、そういう人にリアルであったことないので、会ってみたい。\n:::\u003c/p\u003e\n\u003ch2\u003e4. 現代の到達点：マルチパラダイムによる統合\u003c/h2\u003e\n\u003ch3\u003e🤝 対立から融合へ\u003c/h3\u003e\n\u003cp\u003eかつては「OOP vs FP」といった対立構造で語られることもありましたが、現代のモダンな開発においては、これらは相互補完的な関係にあります。\u003c/p\u003e\n\u003cp\u003e:::note\nここの対立が結構ネットで見かける対立です。\n一長一短ではあるんだろうけど、実際じゃあ実務でどうやって使い分けるの？みたいなところで言うと、答えが出るまでに長い経験が必要だと思います。多分、ほとんどのエンジニアが答えられない気がする、知らんけど。\n:::\u003c/p\u003e\n\u003cp\u003e多くの現代的な言語（Scala, Kotlin, TypeScript, Swift, Rust, C# など）は、\u003cstrong\u003eマルチパラダイム言語\u003c/strong\u003e として設計されています。\u003c/p\u003e\n\u003cp\u003e:::note\nここら辺の言語は、実用性！！！！実務で使える！！！！みたいなところで、関数型とオブジェクト指向型のいいとこどりをしています。だから人気です。\n:::\u003c/p\u003e\n\u003ch3\u003e🏗️ 現代的なアーキテクチャの標準形\u003c/h3\u003e\n\u003cp\u003e両者の「いいとこ取り」をする設計が、現在のデファクトスタンダードになりつつあります。\u003c/p\u003e\n\u003cp\u003e| 領域                             | 採用するパラダイム     | 理由                                                                                                                                                |\n| -------------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |\n| システム構造・コンポーネント定義 | オブジェクト指向 (OOP) | ドメインモデルの表現、依存性の注入 (DI)、インターフェースによる抽象化には、クラスベースの設計が適しているため。                                     |\n| データ処理・ロジック記述         | 関数型 (FP)            | データの変換、フィルタリング、非同期処理の連鎖などは、不変データと高階関数（\u003ccode\u003emap\u003c/code\u003e / \u003ccode\u003efilter\u003c/code\u003e / \u003ccode\u003ereduce\u003c/code\u003e）を使った方が簡潔でバグが混入しにくいため。 |\u003c/p\u003e\n\u003cp\u003e:::note\nこの表から分かる通り、それぞれ分かりやすく書ける分野が違うので、使い分けましょう〜ってことが結論になるのかな？と思います。\nでも、以前としてその使い分けは、これ！と汎用的に言える基準みたいなのが多く、難しいです。\nTPO によるとしか言えないので、使い分けについては経験と深い洞察が必要です。\nそこら辺をまとめている人がいたら知りたいですね。\n:::\u003c/p\u003e\n\u003ch3\u003e📝 コード例：融合のイメージ (Scala/TypeScript 風)\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-scala\"\u003e// 構造（OOP）：データ構造をクラス/型で定義\ncase class User(id: Int, name: String, isActive: Boolean)\n\nclass UserRepository {\n  // ロジック（FP）：データ処理は関数型のアプローチで記述\n  def getActiveUserNames(users: List[User]): List[String] = {\n    users\n      .filter(user =\u003e user.isActive) // 宣言的：条件に合うものを抽出\n      .map(user =\u003e user.name)        // 宣言的：名前だけを取り出す\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e:::note\njava の後継？みたいな言語の scala が結構いいところどりの言語としては最初で有名みたいです。\n:::\u003c/p\u003e\n\u003ch1\u003eまとめ\u003c/h1\u003e\n\u003cp\u003eプログラミングパラダイムの変遷は、流行り廃りではなく、ハードウェアの進化とソフトウェアの巨大化に対する「生存戦略」 でした。\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e構造化プログラミングは、無秩序なロジックに秩序を与えました。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eオブジェクト指向は、肥大化する 状態（データ） 管理に秩序を与えました。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e関数型プログラミングは、複雑化する並行処理とデータフローに秩序を与えました。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e私たちは今、これらの強力な武器をすべて使える恵まれた時代にいます。\n重要なのは「どれが優れているか」を決めることではなく、「目の前の課題に対して、どのパラダイムの道具を使えば最もシンプルに解決できるか」 を見極める力です。\u003c/p\u003e\n\u003cp\u003e:::note\n以上になります。まあ、ネットでそう言う対立があったら、大抵の場合は、どちらかがパラダイムシフトへの変遷について知らないとか、実用性ではなく綺麗な記述に価値を起きすぎているとか、そう言う場合が多いので、実務で役にたつのは今回の記事でのまとめを参考にして、そう言う極端なのは面白いけど無視するべきかなーと思います。AI が言っていることは結構正しい。\n:::\u003c/p\u003e\n"])</script><script>self.__next_f.push([1,"4:[\"$\",\"div\",null,{\"className\":\"min-h-screen bg-zinc-50 text-zinc-900\",\"children\":[\"$\",\"div\",null,{\"className\":\"mx-auto max-w-3xl px-6 py-12\",\"children\":[[\"$\",\"$Ld\",null,{\"href\":\"/\",\"className\":\"text-sm text-zinc-500 transition hover:text-zinc-800\",\"children\":\"← Back to list\"}],[\"$\",\"p\",null,{\"className\":\"mt-6 text-xs uppercase tracking-[0.2em] text-zinc-500\",\"children\":\"2025年12月01日\"}],[\"$\",\"h1\",null,{\"className\":\"mt-2 text-3xl font-semibold tracking-tight text-zinc-950\",\"children\":\"プログラミングパラダイムの変遷史：構造化からオブジェクト指向、そして関数型との融合へ\"}],[\"$\",\"div\",null,{\"className\":\"mt-3 flex flex-wrap gap-2\",\"children\":[[\"$\",\"span\",\"アイデア\",{\"className\":\"rounded-full bg-zinc-200 px-3 py-1 text-xs text-zinc-800\",\"children\":\"アイデア\"}]]}],[\"$\",\"article\",null,{\"className\":\"post-body mt-8 leading-relaxed text-zinc-800\",\"dangerouslySetInnerHTML\":{\"__html\":\"$e\"}}]]}]}]\n"])</script><script>self.__next_f.push([1,"9:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"f:I[27201,[\"/blog/_next/static/chunks/ff1a16fafef87110.js\",\"/blog/_next/static/chunks/247eb132b7f7b574.js\"],\"IconMark\"]\nb:[[\"$\",\"title\",\"0\",{\"children\":\"プログラミングパラダイムの変遷史：構造化からオブジェクト指向、そして関数型との融合へ\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"なぜネット上で原理主義者が対立してしまうのか？\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/blog/favicon.ico?favicon.0b3bf435.ico\",\"sizes\":\"256x256\",\"type\":\"image/x-icon\"}],[\"$\",\"$Lf\",\"3\",{}]]\n7:null\n"])</script></body></html>

@@ -1,0 +1,81 @@
+1:"$Sreact.fragment"
+2:I[22016,["/blog/_next/static/chunks/796e69ae18b2784c.js"],""]
+6:I[97367,["/blog/_next/static/chunks/ff1a16fafef87110.js","/blog/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1d2f,<h1>はじめに</h1>
+<p>こんにちは。BMI921です。
+今回は、<strong>「YouTubeの視聴履歴（生き恥）をDiscordで共有して、友達との仲を深める」</strong> という、少し変わったDiscord BotとChrome拡張機能を作ったので紹介します。</p>
+<p>その名も <strong>IkihajiTube</strong> です。</p>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3091887/3962b498-efff-4b9e-8197-7c3667d98c4d.jpeg" alt="thumbnail-ikihajitube.jpeg"></p>
+<h3>🔗 リンク</h3>
+<ul>
+<li><strong>GitHub</strong>: <a href="https://github.com/bmi921/ikihaji-tube">https://github.com/bmi921/ikihaji-tube</a></li>
+<li><strong>Chrome Web Store</strong>: <a href="https://chromewebstore.google.com/detail/ikihajitube-client/lgonkdolpefidckilfbpdgpkfilkbhie">IkihajiTube Client</a></li>
+</ul>
+<h2>開発の動機</h2>
+<p>みなさんは、友人がYouTubeで普段どんな動画を見ているか気になったことはありませんか？
+あるいは、「この動画面白い！」と思ったものを共有したいけど、いちいちURLを貼るのは面倒...と思ったことは？</p>
+<p><strong>「自分の視聴履歴（生き恥）をさらけ出すことで、逆説的に友情が深まるのではないか？」</strong></p>
+<p>そんな仮説（？）のもと、視聴履歴を自動収集し、Discordサーバーに垂れ流すシステムを開発しました。</p>
+<p>:::note
+spotifyにコラボプレイリストという、複数人が聞いた曲をまとめてくれる機能があります。それがアイデアの本です。Youtubeのニッチな動画を共有できる機会が現実ではなく、残念だなと常々思ってました...
+:::</p>
+<h2>IkihajiTubeでできること</h2>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3091887/1ce21a66-fa04-455a-bbd7-f29fd8c33935.jpeg" alt="b.jpeg"></p>
+<p>主な機能は以下の2点です。</p>
+<ol>
+<li><strong>複数人が視聴した動画の共有</strong>: サーバー内のメンバーで、同じ動画を見た人がいれば「これ、みんな見てるよ！」と通知します。共通の話題作りに最適です。</li>
+<li><strong>ランダムな視聴履歴の共有</strong>: 誰かが視聴した動画をランダムにピックアップして晒します。意外な一面が見れるかもしれません。</li>
+</ol>
+<p>Chrome拡張機能を入れるだけで、あとはバックグラウンドで自動的に履歴が収集・共有されます。</p>
+<h2>システム構成と技術スタック</h2>
+<p>今回の開発では、新しい技術の学習も兼ねてモダンな技術スタックを採用しました。</p>
+<h3>全体のアーキテクチャ</h3>
+<p>システムは大きく分けて3つのコンポーネントで構成されています。</p>
+<ol>
+<li><strong>Chrome Extension</strong>: ユーザーのYouTube視聴履歴を収集するクライアント</li>
+<li><strong>API Server (ElysiaJS)</strong>: 視聴履歴を受け取り、DBに保存するサーバー</li>
+<li><strong>Discord Bot</strong>: 蓄積されたデータから動画情報をDiscordに投稿するボット</li>
+</ol>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3091887/f11b3407-4e32-4f13-a82b-6eb1c4c7e00f.jpeg" alt="c.jpeg"></p>
+<h3>技術スタック一覧</h3>
+<p>開発効率とパフォーマンスを意識し、ランタイムには <strong>Bun</strong> を採用しました。また、これらを一元管理するために <strong>Turborepo</strong> を導入しています。</p>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/3091887/fd6ee04f-109a-44ba-98e9-1f57f0246fd0.jpeg" alt="d.jpeg"></p>
+<p>| カテゴリ | 技術 | 選定理由・コメント |
+| --- | --- | --- |
+| <strong>ランタイム</strong> | <strong>Bun</strong> | 起動が爆速で、開発体験が非常に良かったです。 |
+| <strong>モノレポ管理</strong> | <strong>Turborepo</strong> | API, Bot, Extensionを単一リポジトリで管理し、型定義(packages/core)を共有できるようにしました。 |
+| <strong>API</strong> | <strong>ElysiaJS</strong> | Bun向けのWebフレームワーク。型安全性とパフォーマンス重視で採用。 |
+| <strong>DB / ORM</strong> | <strong>PostgreSQL / Drizzle ORM</strong> | SQLライクに書けるDrizzleが最近のお気に入りです。 |
+| <strong>環境構築</strong> | <strong>Docker / Dev Containers</strong> | <code>docker-compose up</code> だけでDB等の環境が揃うようにしています。 |</p>
+<h2>技術的なこだわりポイント</h2>
+<h3>1. Bun + ElysiaJS の開発体験</h3>
+<p>Bunの起動やビルドはNode.jsの数倍速く、待機時間がほぼない爆速な開発体験でした。特にElysiaJSはデフォルトでtRPCのようなEnd-to-Endの型安全性が備わっており、サーバーの変更が即座にクライアントの型補完に反映されるのが「えぐい」ほど快適でした。</p>
+<h3>2. Turborepoによるモノレポ構成</h3>
+<p>Turborepoを活用して、APIとChrome拡張で使う共通の型定義やエンティティをpackagesに切り出し、再利用性を極限まで高めました。リクエストの型などを共通化することで、一箇所の修正が全体に安全に反映される構成が作れて「超便利」でした。</p>
+<h3>3. Chrome拡張機能の自動収集</h3>
+<p>Chrome拡張機能がブラウザのバックグラウンドで動作し、<code>youtube.com</code>のドメインを検知して、クエリパラメータの<code>?v=&#x3C;video_id></code>をサーバーに送ります。視聴履歴を送るだけの簡単な仕組みですね！ですが、視聴履歴を、どのグループに属している誰が、という情報はわからないので、discord Oauth認証でログインして個人情報をdiscord APIから取得することで実現しています。</p>
+<p>:::note
+本当は、Youtubeの公式APIに視聴履歴をもらえればよかったんですが、プライバシー？セキュリティ？とかの関係でなかったです。こういう選択を取らざるを得ず、モバイルアプリの視聴履歴を取れないのは残念です。
+:::</p>
+<h2>使い方</h2>
+<ol>
+<li><a href="https://chromewebstore.google.com/detail/ikihajitube-client/lgonkdolpefidckilfbpdgpkfilkbhie">Chrome拡張機能</a>をインストール</li>
+<li>拡張機能からDiscord認証を行う</li>
+<li>自分のDiscordサーバーにBotを招待（<a href="https://discord.com/oauth2/authorize?client_id=1428369369699713108">招待リンク</a>）</li>
+<li>チャンネルで <code>/register</code> を実行</li>
+</ol>
+<p>これだけで「生き恥」の共有が始まります！</p>
+<h2>おわりに</h2>
+<p>「IkihajiTube」はオープンソースで開発しています。
+もし面白いなと思ったら、GitHubのStar⭐️をいただけると開発の励みになります！</p>
+<p>:::note
+今後の展望ですが、LLMによるフィルタリング機能を実装予定です。
+流石に、IkihajiTubeとはいえ、人に晒したくない恥もあるかと思うので。</p>
+<p>技術育成camp vol.17のハッカソンで一緒にチーム開発をしてくれた友人に感謝いたします！
+:::</p>
+<p><strong>GitHubリポジトリ</strong>: https://github.com/bmi921/ikihaji-tube</p>
+0:{"buildId":"Hz7WUFfo-Gyfa6SCoaFJP","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-zinc-50 text-zinc-900","children":["$","div",null,{"className":"mx-auto max-w-3xl px-6 py-12","children":[["$","$L2",null,{"href":"/","className":"text-sm text-zinc-500 transition hover:text-zinc-800","children":"← Back to list"}],["$","p",null,{"className":"mt-6 text-xs uppercase tracking-[0.2em] text-zinc-500","children":"2025年12月05日"}],["$","h1",null,{"className":"mt-2 text-3xl font-semibold tracking-tight text-zinc-950","children":"YouTubeの視聴履歴(生き恥)を友達に晒すDiscord Bot「IkihajiTube」を作った話"}],["$","div",null,{"className":"mt-3 flex flex-wrap gap-2","children":[["$","span","個人開発",{"className":"rounded-full bg-zinc-200 px-3 py-1 text-xs text-zinc-800","children":"個人開発"}],["$","span","おもしろ",{"className":"rounded-full bg-zinc-200 px-3 py-1 text-xs text-zinc-800","children":"おもしろ"}]]}],["$","article",null,{"className":"post-body mt-8 leading-relaxed text-zinc-800","dangerouslySetInnerHTML":{"__html":"$3"}}]]}]}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/blog/_next/static/chunks/796e69ae18b2784c.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
